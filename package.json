@@ -1,0 +1,54 @@
+{
+  "name": "iirose-lyrics",
+  "author": "Flower-Q",
+  "description": "Lyrics plugin for IIROSE",
+  "version": "1.0.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iirose-tools/iirose-lyrics"
+  },
+  "scripts": {
+    "clean": "rimraf lib",
+    "dev": "cross-env LOCAL_DEV=1 webpack-dev-server --config webpack.config.ts",
+    "prebuild": "yarn clean",
+    "build": "webpack --config webpack.config.ts",
+    "build:prod": "cross-env NODE_ENV=production yarn build",
+    "release": "standard-version"
+  },
+  "dependencies": {
+    "aes-js": "^3.1.2",
+    "blueimp-md5": "^2.16.0",
+    "gmxhr": "^1.1.1",
+    "lrc-file-parser": "^1.0.5"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^9.0.1",
+    "@commitlint/config-conventional": "^9.0.1",
+    "@types/aes-js": "^3.1.1",
+    "@types/blueimp-md5": "^2.7.0",
+    "@types/chrome": "^0.0.121",
+    "@types/copy-webpack-plugin": "^6.0.0",
+    "@types/greasemonkey": "^4.0.0",
+    "@types/webpack": "^4.41.21",
+    "@types/webpack-dev-server": "^3.11.0",
+    "copy-webpack-plugin": "^6.0.3",
+    "cross-env": "^7.0.2",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "prettier": "^2.0.5",
+    "read-package-json": "^2.1.1",
+    "rimraf": "^3.0.2",
+    "standard-version": "^8.0.1",
+    "ts-loader": "^8.0.0",
+    "ts-node": "^8.10.2",
+    "tslint": "^6.1.2",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.9.6",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-extension-manifest-plugin": "^0.5.0",
+    "webpack-userscript": "^2.5.4"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "[name]",
+  "description": "[description]",
+  "version": "0",
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "https://music.163.com/",
+    "https://acs.m.xiami.com/"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "matches": ["https://iirose.com/messages.html"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
