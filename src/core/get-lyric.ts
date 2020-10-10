@@ -1,4 +1,5 @@
 import * as NetEase from './api/netease';
+import * as QQ from './api/qq';
 import * as Xiami from './api/xiami';
 
 export function getLyric(
@@ -23,6 +24,11 @@ export function getLyric(
       if (songId) {
         return NetEase.getLyric(XHR, songId);
       }
+    } else if (url.hostname === 'y.qq.com') {
+      const pathSegments = url.pathname.split('/');
+      const songId = pathSegments[pathSegments.length - 1].replace(/\..+$/, '');
+
+      return QQ.getLyric(XHR, songId);
     } else if (url.hostname === 'www.xiami.com') {
       const pathSegments = url.pathname.split('/');
       const songId = pathSegments[pathSegments.length - 1];

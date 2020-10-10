@@ -18,7 +18,7 @@ chrome.runtime.onMessage.addListener(
 );
 
 const requestFilter: RequestFilter = {
-  urls: ['*://music.163.com/*', '*://acs.m.xiami.com/*'],
+  urls: ['*://music.163.com/*', '*://c.y.qq.com/*', '*://acs.m.xiami.com/*'],
   types: ['xmlhttprequest']
 };
 
